@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:59:10 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 11:23:16 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:34:48 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void k_sort(t_list *a, t_list *b)
 		i++;
 	if (i < (length / 2))
 	{
-		while (i < 0)
+		while (i > 0)
 		{
 			rotate_b(b);
 			i--;
