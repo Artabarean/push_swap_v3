@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 11:03:42 by alex              #+#    #+#             */
-/*   Updated: 2025/04/08 12:34:57 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 09:59:35 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ int	stack_pop(t_list *stack)
 {
 	int		i;
 	long	value;
-
+	
 	if (stack->top < 0)
 		return (-1);
 	i = 0;
@@ -24,6 +24,24 @@ int	stack_pop(t_list *stack)
 	while (i < stack->top)
 	{
 		stack->array[i] = stack->array[i + 1];
+		i++;
+	}
+	stack->top--;
+	return (value);
+}
+
+int	indx_pop(t_list	*stack)
+{
+	int		i;
+	long	value;
+	
+	if (stack->top < 0)
+		return (-1);
+	i = 0;
+	value = stack->indx[0];
+	while (i < stack->top)
+	{
+		stack->indx[i] = stack->indx[i + 1];
 		i++;
 	}
 	stack->top--;

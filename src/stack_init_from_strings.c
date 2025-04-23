@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 11:19:18 by alex              #+#    #+#             */
-/*   Updated: 2025/04/22 10:56:18 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:37:33 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,7 @@ void	stack_init_from_strings(t_list *stack, char **strings)
 	while (i >= 0)
 	{
 		value = ft_atoi_long(strings[i]);
-		stack_push(stack, value);
+		first_stack_push(stack, value);
 		i--;
 	}
 	stack->indx = assign_indx(stack);

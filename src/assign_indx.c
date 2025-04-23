@@ -6,21 +6,36 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:55:17 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/22 11:04:52 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:31:36 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int sort_pseudo(int	*pseudo)
+int *sort_pseudo(int *pseudo, int size)
 {
 	int	i;
+	int	temp;
 
+	if (size <= 1)
+		return (pseudo);
 	i = 0;
-	
+	temp = 0;
+	while (i < size - 1)
+	{
+		if (pseudo[i] > pseudo[i + 1])
+		{
+			temp = pseudo[i];
+			pseudo[i] = pseudo[i + 1];
+			pseudo[i + 1] = temp;
+		}
+		i++;
+	}
+	sort_pseudo(pseudo, size - 1);
+	return (pseudo);
 }
 
-int	copy_array(int	*pseudo, t_list *stack)
+int	*copy_array(int	*pseudo, t_list *stack)
 {
 	int	i;
 
@@ -33,16 +48,31 @@ int	copy_array(int	*pseudo, t_list *stack)
 	return (pseudo);
 }
 
-int	assign_indx(t_list *stack)
+int	*assign_indx(t_list *stack)
 {
 	int	*pseudo;
+	int	j;
+	int	i;
 	
+	i = 0;
 	pseudo = (int *)malloc(sizeof(int) * stack->size);
 	if (!pseudo)
-	{
-		free(pseudo);
-		return (NULL);
-	}
+		return (free(pseudo), NULL);
 	pseudo = copy_array(pseudo, stack);
-	pseudo = sort_pseudo(pseudo);
+	pseudo = sort_pseudo(pseudo, stack->size);
+	while (i < stack->size)
+	{
+		j = 0;
+		while (j < stack->size)
+		{
+			if (stack->array[i] == pseudo[j])
+			{
+				stack->indx[i] = j;
+				break;
+			}
+			j++;
+		}
+		i++;
+	}
+	return (stack->indx);
 }

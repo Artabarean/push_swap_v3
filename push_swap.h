@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:53:05 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/22 13:06:37 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:36:43 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -30,7 +30,8 @@ typedef struct t_list
 	int		top;
 }			t_list;
 
-int			assign_indx(t_list *stack);
+int			indx_pop(t_list	*stack);
+int			*assign_indx(t_list *stack);
 int			ft_sqrt(int number);
 size_t		ft_strlen(char *s);
 char		*ft_remove_zeros(char *result);
@@ -46,14 +47,13 @@ void		rotate(t_list *stack, char name);
 void		reverse_rotate(t_list *stack, char name);
 void		stack_init_from_strings(t_list *stack, char **strings);
 t_list		*stack_init(int size);
+void		first_stack_push(t_list *stack, long value);
 void		k_sort(t_list *a, t_list *b);
 int			stack_pop(t_list *stack);
-void		stack_push(t_list *stack, long value);
+void		stack_push(t_list *stack, long value, int indx);
 void		swap_a(t_list *stack);
 int			check(long *nums, int top);
 void		swap_b(t_list *stack);
-void		rotate__iterate_b(t_list *b, int *max_indx);
-void		reverse_rotate_iterate_b(t_list *b, int *max_indx);
 int			stack_is_sorted(t_list *stack);
 int			stack_is_empty(t_list *stack);
 int			stack_len(t_list *stack);
