@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/13 09:20:41 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:08:49 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:58:35 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@ void	swap_a(t_list *stack)
 {
 	int	temp;
 	int	indx_tmp;
-	
+
 	temp = 0;
 	indx_tmp = 0;
 	if (stack->top < 1)
@@ -34,7 +34,7 @@ void	swap_b(t_list *stack)
 {
 	int	temp;
 	int	indx_tmp;
-	
+
 	temp = 0;
 	indx_tmp = 0;
 	if (stack->top < 1)

@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 09:43:26 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/22 13:06:31 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:57:58 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -49,7 +49,7 @@ int	find_max_value(t_list *stack)
 	int	i;
 	int	max;
 	int	length;
- 
+
 	length = stack_len(stack);
 	max = INT_MIN;
 	i = 0;

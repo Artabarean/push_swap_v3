@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/21 11:03:42 by alex              #+#    #+#             */
-/*   Updated: 2025/04/23 12:10:56 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:58:27 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,8 @@
 
 long	*stack_pop(t_list *stack, long *value)
 {
-	int		i;
-	
+	int	i;
+
 	i = 0;
 	value[0] = stack->array[0];
 	value[1] = stack->indx[0];

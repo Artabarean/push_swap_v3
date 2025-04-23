@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:53:05 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 12:09:56 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:55:12 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,11 +16,8 @@
 # include <ctype.h>
 # include <limits.h>
 # include <stdarg.h>
-# include <stdio.h>
 # include <stdlib.h>
 # include <unistd.h>
-// ARG="$(shuf -i 1-1000 -n 100 | tr '\n' ' ')"; ./push_swap $ARG | wc -l
-// ARG="$(shuf -i 1-1000 -n 100 | tr '\n' ' ')"; ./push_swap $ARG | ./checker_linux $ARG
 
 typedef struct t_list
 {

@@ -6,13 +6,13 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:55:17 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 11:54:46 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:58:45 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int *sort_pseudo(int *pseudo, int size)
+int	*sort_pseudo(int *pseudo, int size)
 {
 	int	i;
 	int	temp;
@@ -35,7 +35,7 @@ int *sort_pseudo(int *pseudo, int size)
 	return (pseudo);
 }
 
-int	*copy_array(int	*pseudo, t_list *stack)
+int	*copy_array(int *pseudo, t_list *stack)
 {
 	int	i;
 
@@ -53,7 +53,7 @@ int	*assign_indx(t_list *stack)
 	int	*pseudo;
 	int	j;
 	int	i;
-	
+
 	i = 0;
 	pseudo = (int *)malloc(sizeof(int) * stack->size);
 	if (!pseudo)
@@ -68,7 +68,7 @@ int	*assign_indx(t_list *stack)
 			if (stack->array[i] == pseudo[j])
 			{
 				stack->indx[i] = j;
-				break;
+				break ;
 			}
 			j++;
 		}

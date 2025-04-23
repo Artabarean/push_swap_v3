@@ -6,13 +6,13 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:59:10 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 12:34:48 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 12:57:43 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-void k_sort(t_list *a, t_list *b)
+void	k_sort(t_list *a, t_list *b)
 {
 	int	i;
 	int	length;
@@ -60,7 +60,7 @@ void	process_stack_a(t_list *a, t_list *b, int *i, int range)
 void	sort_large(t_list *a, t_list *b)
 {
 	int	i;
-	int range;
+	int	range;
 
 	i = 0;
 	if (stack_len(a) <= 100)
