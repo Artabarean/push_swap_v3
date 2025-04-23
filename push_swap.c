@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:33:12 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:49:32 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -42,11 +42,27 @@ int	push_swap(int argc, char **numbers, int count)
 {
 	t_list	*sa;
 	t_list	*sb;
+	int	i;
 
+	i = 0;
 	sa = stack_init(count);
 	sb = stack_init(count);
 	stack_init_from_strings(sa, numbers);
 	sa->top = count - 1;
+	while (i <= sa->top)
+	 {
+	     printf("%ld, ", sa->array[i]);
+	     i++;
+	 }
+	 printf("\n");
+	 i = 0;
+	 while (i <= sa->top)
+	 {
+	     printf("%d, ", sa->indx[i]);
+	     i++;
+	 }
+	 printf("\n");
+	 i = 0;
 	if (args_valid(sa->array, sa->top) == 1 || check(sa->array, sa->top) == 1)
 	{
 		if (argc == 2)
@@ -60,6 +76,19 @@ int	push_swap(int argc, char **numbers, int count)
 		else
 			organizer(sa, sb);
 	}
+	while (i <= sa->top)
+	 {
+	     printf("%ld, ", sa->array[i]);
+	     i++;
+	 }
+	 printf("\n");
+	 i = 0;
+	 while (i <= sa->top)
+	 {
+	     printf("%d, ", sa->indx[i]);
+	     i++;
+	 }
+	 printf("\n");
 	if (argc == 2)
 		ft_free_array(numbers, count);
 	return (free_stacks(sa, sb), 0);

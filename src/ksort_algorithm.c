@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:59:10 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:38:03 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 10:46:38 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ void k_sort(t_list *a, t_list *b)
 	int	length;
 
 	i = 0;
-	length = stack_len(a);
+	length = stack_len(b);
 	while (b->indx[i] != length - 1)
 		i++;
 	if (i < (length / 2))
