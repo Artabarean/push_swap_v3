@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/22 10:55:17 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:31:36 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:54:46 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,7 +40,7 @@ int	*copy_array(int	*pseudo, t_list *stack)
 	int	i;
 
 	i = 0;
-	while (i <= stack->size)
+	while (i < stack->size)
 	{
 		pseudo[i] = stack->array[i];
 		i++;
@@ -74,5 +74,5 @@ int	*assign_indx(t_list *stack)
 		}
 		i++;
 	}
-	return (stack->indx);
+	return (free(pseudo), stack->indx);
 }
