@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:49:32 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:24:16 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ int	stack_is_empty(t_list *stack)
 
 int	stack_len(t_list *stack)
 {
+	if (!stack)
+		return (1);
 	return (stack->top + 1);
 }
 
@@ -88,7 +90,14 @@ int	push_swap(int argc, char **numbers, int count)
 	     printf("%d, ", sa->indx[i]);
 	     i++;
 	 }
+	 i = 0;
 	 printf("\n");
+	 while (i <= sb->top)
+	 {
+	     printf("%ld, ", sb->array[i]);
+	     i++;
+	 }
+	 printf("\n"); 
 	if (argc == 2)
 		ft_free_array(numbers, count);
 	return (free_stacks(sa, sb), 0);

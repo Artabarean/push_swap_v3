@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:59:10 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 10:46:38 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/23 11:23:16 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,8 @@ void k_sort(t_list *a, t_list *b)
 	{
 		while (i < length)
 		{
-			i++;
 			reverse_rotate_b(b);
+			i++;
 		}
 	}
 	push_to_a(b, a);
@@ -63,11 +63,10 @@ void	sort_large(t_list *a, t_list *b)
 	int range;
 
 	i = 0;
-	range = ft_sqrt(a->size) *14 / 10;
-	if (range < 1)
-		range = 1;
-	if (stack_len(a) == 0)
-        return;
+	if (stack_len(a) <= 100)
+		range = 20;
+	else
+		range = 25;
 	while (stack_len(a))
 		process_stack_a(a, b, &i, range);
 	while (stack_len(b))
