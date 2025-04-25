@@ -1,38 +1,21 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char_search.c                                      :+:      :+:    :+:   */
+/*   ft_issign.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 10:11:42 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/25 10:34:48 by atabarea         ###   ########.fr       */
+/*   Created: 2025/04/25 10:23:01 by atabarea          #+#    #+#             */
+/*   Updated: 2025/04/25 10:35:33 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	char_search(char **num)
+int	ft_issign(char num)
 {
-	int	i;
-	int	j;
-
-	i = 0;
-	while (num[i])
-	{
-		j = 0;
-		while (num[i][j])
-		{
-			if (!ft_isdigit(num[i][j]) && !ft_issign(num[i][j]))
-				return (1);
-			if (ft_issign(num[i][j]))
-			{
-				if (!ft_isdigit(num[i][j + 1]))
-					return (1);
-			}
-			j++;
-		}
-		i++;
-	}
-	return (0);
+	if (num == '-' || num == '+')
+		return (1);
+	else
+		return (0);
 }

@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:53:05 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 12:55:12 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/25 10:26:15 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -72,5 +72,6 @@ void		push_to_b(t_list *src, t_list *dst);
 long		ft_atoi_long(char *nptr);
 void		sort_four(t_list *a, t_list *b);
 char		**ft_free_array(char **liberated, size_t size);
+int			ft_issign(char num);
 
 #endif
