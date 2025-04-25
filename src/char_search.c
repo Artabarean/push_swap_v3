@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/03 10:11:42 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/25 10:34:48 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/25 13:25:51 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,6 +28,8 @@ int	char_search(char **num)
 			if (ft_issign(num[i][j]))
 			{
 				if (!ft_isdigit(num[i][j + 1]))
+					return (1);
+				if (j != 0 && ft_isdigit(num[i][j - 1]))
 					return (1);
 			}
 			j++;

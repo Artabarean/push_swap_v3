@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/23 12:55:53 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/25 13:27:24 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,7 +73,7 @@ int	main(int argc, char *argv[])
 	int		count;
 
 	if (argc == 1)
-		return (1);
+		return (0);
 	if ((argc == 2 && !argv[1][0]))
 		return (write(2, "Error\n", 6), 1);
 	count = 0;
