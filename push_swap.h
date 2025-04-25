@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:53:05 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/25 10:26:15 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/25 13:45:44 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,6 @@ typedef struct t_list
 }			t_list;
 
 int			*assign_indx(t_list *stack);
-int			ft_sqrt(int number);
 size_t		ft_strlen(char *s);
 char		*ft_remove_zeros(char *result);
 int			find_max_value(t_list *stack);
