@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/07 10:24:43 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/08 12:57:23 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:21:01 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,8 +26,6 @@ char	*ft_remove_zeros(char *result)
 	}
 	if ('+' == *result)
 		result++;
-	if (!*result)
-		return (write(2, "Error\n", 6), result);
 	while ('0' == *result && *(result + 1))
 		result++;
 	if (*result && negative)

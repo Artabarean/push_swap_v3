@@ -1,39 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   char_search.c                                      :+:      :+:    :+:   */
+/*   max_min_int.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/04/03 10:11:42 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/28 11:47:09 by atabarea         ###   ########.fr       */
+/*   Created: 2025/04/28 12:23:14 by atabarea          #+#    #+#             */
+/*   Updated: 2025/04/28 12:39:52 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "../push_swap.h"
 
-int	char_search(char **num)
+int	max_min_int(char **arg)
 {
 	int	i;
 	int	j;
+	int	k;
 
 	i = 0;
-	while (num[i])
+	while (arg[i])
 	{
 		j = 0;
-		while (num[i][j])
+		k = 0;
+		while (arg[i][j])
 		{
-			if (num[i][j] == '\0')
+			if (arg[i][j] != ' ')
+				k++;
+			if (arg[i][j] == ' ')
+				k = 0;
+			if (k > 11)
 				return (1);
-			if (!ft_isdigit(num[i][j]) && !ft_issign(num[i][j]))
-				return (1);
-			if (ft_issign(num[i][j]))
-			{
-				if (!ft_isdigit(num[i][j + 1]))
-					return (1);
-				if (j != 0 && ft_isdigit(num[i][j - 1]))
-					return (1);
-			}
 			j++;
 		}
 		i++;

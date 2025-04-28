@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/08 12:53:05 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/25 13:45:44 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:40:03 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,6 +27,7 @@ typedef struct t_list
 	int		top;
 }			t_list;
 
+int			max_min_int(char **num);
 int			*assign_indx(t_list *stack);
 size_t		ft_strlen(char *s);
 char		*ft_remove_zeros(char *result);
@@ -40,7 +41,7 @@ void		free_stacks(t_list *sa, t_list *sb);
 void		push_to_a(t_list *src, t_list *dst);
 void		rotate(t_list *stack, char name);
 void		reverse_rotate(t_list *stack, char name);
-void		stack_init_from_strings(t_list *stack, char **strings);
+int			stack_init_from_strings(t_list *stack, char **strings);
 t_list		*stack_init(int size);
 void		first_stack_push(t_list *stack, long value);
 void		k_sort(t_list *a, t_list *b);
