@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/28 12:40:17 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/28 12:53:38 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,7 +52,11 @@ int	push_swap(int argc, char **numbers, int count)
 		return (free_stacks(sa, sb), write(2, "Error\n", 6), 1);
 	sa->top = count - 1;
 	if (args_valid(sa->array, sa->top) == 1 || check(sa->array, sa->top) == 1)
+	{
+		if (argc == 2)
+			ft_free_array(numbers, count);
 		return (write(2, "Error\n", 6), free_stacks(sa, sb), 1);
+	}
 	if (stack_is_sorted(sa) == 1)
 	{
 		if (stack_len(sa) == 2)

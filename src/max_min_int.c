@@ -6,7 +6,7 @@
 /*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:23:14 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/28 12:39:52 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/28 13:12:54 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,6 +17,7 @@ int	max_min_int(char **arg)
 	int	i;
 	int	j;
 	int	k;
+	int	l;
 
 	i = 0;
 	while (arg[i])
@@ -27,6 +28,7 @@ int	max_min_int(char **arg)
 		{
 			if (arg[i][j] != ' ')
 				k++;
+				
 			if (arg[i][j] == ' ')
 				k = 0;
 			if (k > 11)
