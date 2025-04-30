@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
+/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/28 12:53:38 by atabarea         ###   ########.fr       */
+/*   Updated: 2025/04/30 12:29:47 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -78,8 +78,6 @@ int	main(int argc, char *argv[])
 		return (0);
 	if (argc == 2 && !argv[1][0])
 		return (write(2, "Error\n", 6), 1);
-	if (max_min_int(&argv[1]) == 1)
-		return (write(2, "Error\n", 6), 1);
 	count = 0;
 	if (argc == 2)
 	{
@@ -91,6 +89,8 @@ int	main(int argc, char *argv[])
 	}
 	else
 		numbers = &argv[1];
+	if (max_min_int(&argv[1]) == 1)
+		return (write(2, "Error\n", 6), 1);
 	if (char_search(numbers) == 1)
 		return (write(2, "Error\n", 6), 1);
 	while (numbers[count])
