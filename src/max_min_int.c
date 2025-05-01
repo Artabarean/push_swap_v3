@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/04/28 12:23:14 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/30 12:30:25 by alex             ###   ########.fr       */
+/*   Updated: 2025/05/01 10:48:50 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,23 +15,22 @@
 int	zeros_in_int(char **a)
 {
 	int	i;
+	int	k;
 	int	j;
 
 	i = 0;
 	while (a[i])
-	{	
+	{
+		k = 0;
 		j = 0;
 		while (a[i][j])
 			j++;
-		if ((a[i][0] != '0') || (ft_issign(a[i][0]) && a[i][1] != '0'))
-		{
-			if (j > 11)
-				return (1);
-			else
-				break;
-		}
-		if ((a[i][0] == '0') || (ft_issign(a[i][0]) && a[i][1] == '0'))
-			break;
+		while (a[i][k] == '0' || a[i][k] == '-')
+			k++;
+		if (j > (k + 11))
+			return (1);
+		else
+			break ;
 		i++;
 	}
 	return (0);
@@ -60,4 +59,3 @@ int	max_min_int(char **arg)
 	}
 	return (0);
 }
-

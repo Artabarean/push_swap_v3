@@ -6,7 +6,7 @@
 /*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/04/30 12:29:47 by alex             ###   ########.fr       */
+/*   Updated: 2025/05/01 10:29:21 by alex             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -89,7 +89,7 @@ int	main(int argc, char *argv[])
 	}
 	else
 		numbers = &argv[1];
-	if (max_min_int(&argv[1]) == 1)
+	if (max_min_int(numbers) == 1)
 		return (write(2, "Error\n", 6), 1);
 	if (char_search(numbers) == 1)
 		return (write(2, "Error\n", 6), 1);
