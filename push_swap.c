@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   push_swap.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: alex <alex@student.42.fr>                  +#+  +:+       +#+        */
+/*   By: atabarea <atabarea@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/03/18 11:30:19 by atabarea          #+#    #+#             */
-/*   Updated: 2025/05/01 10:29:21 by alex             ###   ########.fr       */
+/*   Updated: 2025/05/05 11:33:02 by atabarea         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -90,7 +90,7 @@ int	main(int argc, char *argv[])
 	else
 		numbers = &argv[1];
 	if (max_min_int(numbers) == 1)
-		return (write(2, "Error\n", 6), 1);
+		return (ft_free_array(numbers, count), (write(2, "Error\n", 6), 1));
 	if (char_search(numbers) == 1)
 		return (write(2, "Error\n", 6), 1);
 	while (numbers[count])
